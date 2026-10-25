@@ -5,7 +5,8 @@
 
 void merge(int a[], int l, int m, int r) {
     int *t = malloc((r-l+1) * sizeof(int));
-    int i = l, j = m+1, k = 0;
+    int i = l, j = m+1;
+    int k = 0;
 
     while (i <= m && j <= r)
         t[k++] = a[i] <= a[j] ? a[i++] : a[j++];
